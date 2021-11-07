@@ -50,13 +50,9 @@
       <AssemblyReference>System.Memory</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TestFile" sap:VirtualizedContainerService.HintSize="476,888" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="File" sap:VirtualizedContainerService.HintSize="476,888" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="scg:List(x:String)" Name="myCollectionVar">
-        <Variable.Default>
-          <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="New List(of string)" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(of string)]" Name="myCollectionVar" />
       <Variable x:TypeArguments="s:String[]" Name="myString" />
       <Variable x:TypeArguments="x:Int32" Name="counter" />
     </Sequence.Variables>
@@ -73,7 +69,7 @@
         <InArgument x:TypeArguments="x:Int32">0</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="434,379" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile Condition="[counter&lt;=5]" DisplayName="While" sap:VirtualizedContainerService.HintSize="434,379" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
@@ -92,9 +88,6 @@
           </Assign>
         </Sequence>
       </ui:InterruptibleWhile.Body>
-      <ui:InterruptibleWhile.Condition>
-        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="counter&lt;=5" />
-      </ui:InterruptibleWhile.Condition>
     </ui:InterruptibleWhile>
     <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,277" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[myCollectionVar]">
       <ui:ForEach.Body>
