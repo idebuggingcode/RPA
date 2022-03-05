@@ -1,7 +1,0 @@
-Outlook Account -> 06/11/2021 ----- debuggingcode@outlook.com/*nKD2^QW6Ygj6Vk
-UiPath Account -> 06/11/2021  ----- debuggingcode@outlook.com/*nKD2^QW6Ygj6Vk
-Github Account -> 06/11/2021  ----- debuggingcode@outlook.com
-                                    idebuggingcode/*nKD2^QW6Ygj6Vk
-                                    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
-
-Azure Devops -> debuggingcode/kza2inihglm45epnha6b5z4e4uczjylcbocodtsxhhqnmpk2smza
